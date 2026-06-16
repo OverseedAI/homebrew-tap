@@ -5,21 +5,21 @@
 class Overcf < Formula
   desc "Cloudflare CLI for managing DNS and zones"
   homepage "https://github.com/OverseedAI/overcf"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/OverseedAI/overcf/releases/download/v0.1.1/overcf_darwin_amd64.tar.gz"
-      sha256 "22794535b0f990e2b08a01c2be169906ddb0573ae2f912248850e2a9660aef14"
+      url "https://github.com/OverseedAI/overcf/releases/download/v0.1.2/overcf_darwin_amd64.tar.gz"
+      sha256 "d624282c4cca9feaa8251b6aee3e15b04f81988e56ba878d18f2f2acbeb7e96c"
 
       define_method(:install) do
         bin.install "overcf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/OverseedAI/overcf/releases/download/v0.1.1/overcf_darwin_arm64.tar.gz"
-      sha256 "48b1f6273292dcb366b34505bc2176430cf9603c15e77bf129862366f343dac4"
+      url "https://github.com/OverseedAI/overcf/releases/download/v0.1.2/overcf_darwin_arm64.tar.gz"
+      sha256 "2faf25da12eea4accee49874fbc5cd6f4b89612842dc1e67b7411833041b4ba2"
 
       define_method(:install) do
         bin.install "overcf"
@@ -29,15 +29,15 @@ class Overcf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OverseedAI/overcf/releases/download/v0.1.1/overcf_linux_amd64.tar.gz"
-      sha256 "fba1678a83113c5becd4220d1fdc8f78150eb60ff7c69e59966f8c69af57e3f2"
+      url "https://github.com/OverseedAI/overcf/releases/download/v0.1.2/overcf_linux_amd64.tar.gz"
+      sha256 "e0d9a001dcc1336bf235e2fb355627ef39695095a0cc2a0b9d8e85011198d21e"
       define_method(:install) do
         bin.install "overcf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OverseedAI/overcf/releases/download/v0.1.1/overcf_linux_arm64.tar.gz"
-      sha256 "45ff7d101569e411bc74c9834e08c1b237c5a28fe7f87e10894bb5bab1d38664"
+      url "https://github.com/OverseedAI/overcf/releases/download/v0.1.2/overcf_linux_arm64.tar.gz"
+      sha256 "30c4e4b78ba9e641cfa4b34e9ed26e6325fc9d3843cf957ff5d1ff115b1deee6"
       define_method(:install) do
         bin.install "overcf"
       end
